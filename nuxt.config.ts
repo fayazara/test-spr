@@ -7,9 +7,9 @@ export default defineNuxtConfig({
   },
   runtimeConfig: {
     baseUrl:
-      process.env.NUXT_PUBLIC_VERCEL_ENV === "production"
+      process.env.NUXT_ENV_VERCEL_ENV === "production"
         ? "https://test-spr-alpha.vercel.app/"
-        : process.env.NUXT_PUBLIC_VERCEL_ENV === "preview"
+        : process.env.NUXT_ENV_VERCEL_ENV === "preview"
         ? `https://${process.env.NUXT_PUBLIC_VERCEL_URL}/`
         : `${process.env.NGROK_URL}`,
     replicateApiToken: process.env.REPLICATE_API_TOKEN,
