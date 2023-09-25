@@ -27,6 +27,7 @@
         <Icon v-else name="ph:paper-plane-right-duotone" class="h-4 w-4" />
       </button>
     </form>
+    <p class="text-sm text-center text-gray-500">Last created spiral</p>
     <img
       v-if="post.image"
       :src="post.image"
