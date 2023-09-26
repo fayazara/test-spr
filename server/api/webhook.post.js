@@ -22,6 +22,7 @@ const s3Config = {
 
 export default defineEventHandler(async (event) => {
   try {
+    console.log("Webhook Triggered")
     const query = getQuery(event);
     const { secret, id } = query;
 

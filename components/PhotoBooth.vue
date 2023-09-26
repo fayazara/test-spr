@@ -1,9 +1,9 @@
 <template>
   <div class="space-y-4">
     <img
-      v-if="data.image"
-      :src="data.image"
-      :alt="data.prompt"
+      v-if="image"
+      :src="image"
+      :alt="prompt"
       class="h-full w-full aspect-[1] rounded-lg"
     />
     <div
@@ -15,16 +15,22 @@
         Our robots are building your image, please wait...
       </p>
     </div>
-    <h1 v-if="data.prompt" class="text-center text-gray-700 font-medium">
-      {{ data.prompt }}
+    <h1 v-if="prompt" class="text-center text-gray-700 font-medium">
+      {{ prompt }}
     </h1>
   </div>
 </template>
 
 <script setup>
 defineProps({
-  image: String,
-  prompt: String,
+  image: {
+    type: String,
+    default: null,
+  },
+  prompt: {
+    type: String,
+    default: "",
+  },
 });
 </script>
 
